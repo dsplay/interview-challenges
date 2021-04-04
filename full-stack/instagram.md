@@ -16,6 +16,22 @@ This is more or less what we expect you to do.
 
 ## Back-end
 
+### Rules
+
+- You can use Javascript (preferably), PHP, Python or Java;
+- You must create an README file having the instructions to run the code;
+
+> The tips and examples will be in Javascript, but feel free to use your preferred language if it makes your more comfortable
+
+### Goals
+
+- Basic: Write a function/module to call the Instagram APIs correctly and get que response;
+- Extra 1: Expose your function/module as an HTTP server (ex: express.js app);
+- Extra 2: Make your code available on GitHub;
+- Extra 3: Make your application available on the web using any host (ex: Heroku);
+
+### Instructions
+
 The back-end will have to interact with [Instagram Basic Display API](https://developers.facebook.com/docs/instagram-basic-display-api) to retrieve the data from the token.
 
 You can decide if the back-end will have one or more endpoints.
@@ -32,7 +48,7 @@ The API response example, considering a single endpoint, could be something like
    "media":[
       {
          "username":"lukeskywalker",
-         "id":"1231256464654",
+         "id":"22222222222222",
          "caption":"Instagram post with carousel",
          "media_type":"CAROUSEL_ALBUM",
          "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
@@ -41,7 +57,7 @@ The API response example, considering a single endpoint, could be something like
       },
       {
          "username":"lukeskywalker",
-         "id":"1231256464654",
+         "id":"333333333333333",
          "caption":"Video post",
          "media_type":"VIDEO",
          "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
@@ -51,7 +67,7 @@ The API response example, considering a single endpoint, could be something like
       },
       {
          "username":"lukeskywalker",
-         "id":"1231256464654",
+         "id":"44444444444444",
          "caption":"image post 💘",
          "media_type":"IMAGE",
          "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
@@ -63,8 +79,14 @@ The API response example, considering a single endpoint, could be something like
 ```
 
 - To get the user profile info you must use the `/me` endpoint: https://developers.facebook.com/docs/instagram-basic-display-api/reference/me
+
+- To get the recent user media (posts) you must use the `/me/media` endpoint: https://developers.facebook.com/docs/instagram-basic-display-api/reference/user/media 
+
+
+#### Tips and Code Snippets
+
+Example request to get user profile using `axios`
 ```js
-// axios request example
 const response = await axios.get(INSTAGRAM_USER_PROFILE_URL, {
   params: {
     fields: 'id,username,account_type,media_count',
@@ -72,9 +94,9 @@ const response = await axios.get(INSTAGRAM_USER_PROFILE_URL, {
   },
 });
 ```
-- To get the recent user media (posts) you must use the `/me/media` endpoint: https://developers.facebook.com/docs/instagram-basic-display-api/reference/user/media 
+
+Example request to get user media using `axios`
 ```js
-// axios request example
 const response = await axios.get(INSTAGRAM_USER_MEDIA_URL, {
   params: {
     fields: 'username,id,caption,media_type,media_url,permalink,thumbnail_url,timestamp',
@@ -83,4 +105,21 @@ const response = await axios.get(INSTAGRAM_USER_MEDIA_URL, {
 });
 ```
 
+Express hello world example with CORS enabled
+```js
+const express = require('express');
+const cors = require('cors');
 
+const app = express();
+const port = process.env.PORT || 5000;
+
+app.use(cors());
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Server listening at port ${port}`)
+})
+```
