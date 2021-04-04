@@ -19,64 +19,21 @@ This is more or less what we expect you to do.
 ### Rules
 
 - You can use Javascript (preferably), PHP, Python or Java;
+- You can decide if the back-end will have one or more endpoints;
 - You must create an README file having the instructions to run the code;
 
 > The tips and examples will be in Javascript, but feel free to use your preferred language if it makes your more comfortable
 
 ### Goals
 
-- Basic: Write a function/module to call the Instagram APIs correctly and get que response;
-- Extra 1: Expose your function/module as an HTTP server (ex: express.js app);
-- Extra 2: Make your code available on GitHub;
-- Extra 3: Make your application available on the web using any host (ex: Heroku);
+- **Basic:** Write a function/module to call the Instagram APIs correctly and get que response;
+- **Extra 1:** Expose your function/module as an HTTP server (ex: express.js app);
+- **Extra 2:** Make your code available on GitHub;
+- **Extra 3:** Make your application available on the web using any host (ex: Heroku);
 
 ### Instructions
 
 The back-end will have to interact with [Instagram Basic Display API](https://developers.facebook.com/docs/instagram-basic-display-api) to retrieve the data from the token.
-
-You can decide if the back-end will have one or more endpoints.
-
-The API response example, considering a single endpoint, could be something like this:
-```json
-{
-   "profile":{
-      "id":"1231256464654",
-      "username":"lukeskywalker",
-      "account_type":"PERSONAL",
-      "media_count":999
-   },
-   "media":[
-      {
-         "username":"lukeskywalker",
-         "id":"22222222222222",
-         "caption":"Instagram post with carousel",
-         "media_type":"CAROUSEL_ALBUM",
-         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
-         "permalink":"https://www.instagram.com/p/abc",
-         "timestamp":"2021-04-03T19:52:59+0000"
-      },
-      {
-         "username":"lukeskywalker",
-         "id":"333333333333333",
-         "caption":"Video post",
-         "media_type":"VIDEO",
-         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
-         "permalink":"https://www.instagram.com/p/abc",
-         "thumbnail_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
-         "timestamp":"2021-04-02T10:38:01+0000"
-      },
-      {
-         "username":"lukeskywalker",
-         "id":"44444444444444",
-         "caption":"image post 💘",
-         "media_type":"IMAGE",
-         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
-         "permalink":"https://www.instagram.com/p/abc",
-         "timestamp":"2021-03-27T22:44:13+0000"
-      }
-   ]
-}
-```
 
 - To get the user profile info you must use the `/me` endpoint: https://developers.facebook.com/docs/instagram-basic-display-api/reference/me
 
@@ -122,4 +79,46 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Server listening at port ${port}`)
 })
+```
+
+Response example (considering a single endpoint):
+```json
+{
+   "profile":{
+      "id":"1231256464654",
+      "username":"lukeskywalker",
+      "account_type":"PERSONAL",
+      "media_count":999
+   },
+   "media":[
+      {
+         "username":"lukeskywalker",
+         "id":"22222222222222",
+         "caption":"Instagram post with carousel",
+         "media_type":"CAROUSEL_ALBUM",
+         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
+         "permalink":"https://www.instagram.com/p/abc",
+         "timestamp":"2021-04-03T19:52:59+0000"
+      },
+      {
+         "username":"lukeskywalker",
+         "id":"333333333333333",
+         "caption":"Video post",
+         "media_type":"VIDEO",
+         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
+         "permalink":"https://www.instagram.com/p/abc",
+         "thumbnail_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
+         "timestamp":"2021-04-02T10:38:01+0000"
+      },
+      {
+         "username":"lukeskywalker",
+         "id":"44444444444444",
+         "caption":"image post 💘",
+         "media_type":"IMAGE",
+         "media_url":"https://scontent-iad3-1.cdninstagram.com/v/xyz",
+         "permalink":"https://www.instagram.com/p/abc",
+         "timestamp":"2021-03-27T22:44:13+0000"
+      }
+   ]
+}
 ```
