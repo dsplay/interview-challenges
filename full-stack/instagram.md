@@ -16,6 +16,14 @@ This is more or less what we expect you to do.
 
 ## Back-end
 
+### Goals
+
+- **Basic:** Write a function/module to call the Instagram APIs correctly and get the response;
+- **Extra 1:** Expose your function/module as an HTTP server (ex: express.js app);
+- **Extra 2:** Make your code available on GitHub;
+- **Extra 3:** Make your application available on the web using any host (ex: Heroku);
+
+
 ### Rules
 
 - You can use Javascript (preferably), PHP, Python or Java;
@@ -24,12 +32,6 @@ This is more or less what we expect you to do.
 
 > The tips and examples will be in Javascript, but feel free to use your preferred language if it makes your more comfortable
 
-### Goals
-
-- **Basic:** Write a function/module to call the Instagram APIs correctly and get que response;
-- **Extra 1:** Expose your function/module as an HTTP server (ex: express.js app);
-- **Extra 2:** Make your code available on GitHub;
-- **Extra 3:** Make your application available on the web using any host (ex: Heroku);
 
 ### Instructions
 
