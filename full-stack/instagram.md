@@ -19,7 +19,7 @@ This is more or less what we expect you to do.
 ### Goals
 
 - **Basic:** Write a function/module to call the Instagram APIs correctly and get the response;
-- **Extra 1:** Expose your function/module as an HTTP server (ex: express.js app);
+- **Extra 1:** Expose your function/module as an HTTP server (e.g. express.js app);
 - **Extra 2:** Make your code available on GitHub;
 - **Extra 3:** Make your application available on the web using any host (ex: Heroku);
 
@@ -124,3 +124,30 @@ Response example (considering a single endpoint):
    ]
 }
 ```
+
+Reference app backend endpoint
+```
+https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
+```
+
+## Front-end
+
+### Goals
+
+- **Basic:** Create a simple front-end (HTML/CSS/JS) application that consumes the API provided by the back-end and prints the result on the browser console;
+- **Extra 1:** Create a basic user interface to receive the token and show user's profile info and last posts;
+- **Extra 2:** Style the UI with CSS or your preferred styling solution (Sass, LESS, JSS, Style Components, etc));
+- **Extra 3:** Make your code available on GitHub;
+- **Extra 4:** Make your application available on the web using any host (ex: Netlify);
+
+
+### Rules
+
+- You can use React (preferably), jQuery, vanilla Javascript, Vue, or even Ang... no, not Angular!;
+- In the you haven't been able to finish the back-end, you can use the provided "Example response" JSON as your input;
+- You must create an README file having the instructions to run the code;
+
+
+#### Tips and Code Snippets
+
+- You can "steal" some CSS from the Reference App, instead of building it from scratch;
