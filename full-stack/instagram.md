@@ -158,7 +158,7 @@ https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
 #### Tips and Code Snippets
 
 - If you prefer to start building the front-end or in the case you haven't been able to finish the back-end, you can use the Reference App [back-end endpoint](https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>) or the provided "Example response" JSON as your input;
-- If you decide to use React, you can bootstrap your project with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+- If you, wisely, decide to use React :), you can bootstrap your project with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html);
 ```sh
 npx create-react-app instagram-viewer
 cd instagram-viewer
