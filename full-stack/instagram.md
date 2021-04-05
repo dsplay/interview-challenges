@@ -133,7 +133,7 @@ app.listen(port, () => {
 }
 ```
 
-Reference app backend endpoint
+- Reference app backend endpoint
 ```
 https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
 ```
@@ -161,7 +161,7 @@ https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
 - If you decide to use React, you can bootstrap your project with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
 ```sh
 npx create-react-app instagram-viewer
-cd my-app
+cd instagram-viewer
 npm start
 ```
 - You can "steal" some CSS from the Reference App, instead of building it from scratch;
