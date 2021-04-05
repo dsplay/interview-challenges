@@ -18,7 +18,7 @@ This is more or less what we expect you to build.
 
 Keep in mind that:
 - You can start by building the back-end or the front-end (it's up to you);
-- You have a basic and some extra goals for the back-end and front-end. 
+- You have a basic and some extra goals for the back and front-end; Start by the basic one and then go to the extras;
 - You don't have to finish everything. If you get stuck at some point, try to move to the next goal;
 
 
