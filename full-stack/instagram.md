@@ -12,7 +12,15 @@ You can easily generate a token for your account at https://token.dsplay.tv/inst
 
 https://pcc-instagram-viewer.netlify.app/
 
-This is more or less what we expect you to do.
+This is more or less what we expect you to build.
+
+# Before you begin
+
+Keep in mind that:
+- You can start by building the back-end or the front-end (it's up to you);
+- You have a basic and extra goals for the back-end and front-end. 
+- You don't have to finish everything. If you get stuck at some point, try to move to the next goal;
+
 
 ## Back-end
 
@@ -44,7 +52,7 @@ The back-end will have to interact with [Instagram Basic Display API](https://de
 
 #### Tips and Code Snippets
 
-Example request to get user profile using `axios`
+- Example request to get user profile using `axios`
 ```js
 const response = await axios.get(INSTAGRAM_USER_PROFILE_URL, {
   params: {
@@ -54,7 +62,7 @@ const response = await axios.get(INSTAGRAM_USER_PROFILE_URL, {
 });
 ```
 
-Example request to get user media using `axios`
+- Example request to get user media using `axios`
 ```js
 const response = await axios.get(INSTAGRAM_USER_MEDIA_URL, {
   params: {
@@ -64,7 +72,7 @@ const response = await axios.get(INSTAGRAM_USER_MEDIA_URL, {
 });
 ```
 
-Express hello world example with CORS enabled
+- Express hello world example with CORS enabled
 ```js
 const express = require('express');
 const cors = require('cors');
@@ -83,7 +91,7 @@ app.listen(port, () => {
 })
 ```
 
-Response example (considering a single endpoint):
+- Response example (considering a single endpoint):
 ```json
 {
    "profile":{
@@ -144,10 +152,18 @@ https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
 ### Rules
 
 - You can use React (preferably), jQuery, vanilla Javascript, Vue, or even Ang... no, not Angular!;
-- In the you haven't been able to finish the back-end, you can use the provided "Example response" JSON as your input;
 - You must create an README file having the instructions to run the code;
 
 
 #### Tips and Code Snippets
 
+- If you prefer start building the front-end or in the case you haven't been able to finish the back-end, you can use the Reference App [back-end endpoint](https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>) or the provided "Example response" JSON as your input;
+- If you decide to use React, you can bootstrap your project with [Create React App](https://reactjs.org/docs/create-a-new-react-app.html)
+```sh
+npx create-react-app instagram-viewer
+cd my-app
+npm start
+```
 - You can "steal" some CSS from the Reference App, instead of building it from scratch;
+
+## Good Luck!
