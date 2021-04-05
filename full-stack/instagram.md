@@ -4,17 +4,17 @@
 
 Create a complete web app (back and front-end) to show Instagram last posts of a user from a given valid user token.
 
-## How to get a valid token
+### How to get a valid token
 
 You can easily generate a token for your account at https://token.dsplay.tv/instagram
 
-## Reference App
+### Reference App
 
 https://pcc-instagram-viewer.netlify.app/
 
 This is more or less what we expect you to build.
 
-# Before you begin
+## Before you begin
 
 Keep in mind that:
 - You can start by building the back-end or the front-end (it's up to you);
