@@ -29,7 +29,7 @@ Keep in mind that:
 - **Basic:** Write a function/module to call the Instagram APIs correctly and print the responses on the console;
 - **Extra 1:** Expose your function/module as an HTTP server (e.g. Express.js app);
 - **Extra 2:** Make your code available on GitHub;
-- **Extra 3:** Make your application available on the web using any host (ex: Heroku);
+- **Extra 3:** Make your application available on the web using any host (e.g. Heroku);
 
 
 ### Rules
@@ -146,7 +146,7 @@ https://pcc-instagram-api-nodejs.herokuapp.com/api/user?token=<token>
 - **Extra 1:** Create a basic user interface to receive the token and show the profile info and last posts from the user;
 - **Extra 2:** Style the UI with CSS or your preferred styling solution (Sass, Less, JSS, Styled Components, etc));
 - **Extra 3:** Make your code available on GitHub;
-- **Extra 4:** Make your application available on the web using any host (ex: Netlify);
+- **Extra 4:** Make your application available on the web using any host (e.g. Netlify);
 
 
 ### Rules
